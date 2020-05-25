@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Coding Challenge 3</title>
+	</head>
+	<body>
+		<script>
+			function tipCalculator(bill) {
+				if (bill < 50) { //if the bill is less than 50, return 20% of the bill.
+					return Math.round(bill * 0.2);
+				} else if (bill >= 50 && bill <= 200) { //if the bill is between 50 and 200, return 15% of the bill.
+					return Math.round(bill * 0.15);
+				} else { //if the bill is more than 200, return 10% of the bill.
+					return Math.round(bill * 0.1);
+				}
+			}
+			var bill = [124, 48, 268];
+			var tip = [];
+			var totalBill= [];
+			for (var i = 0; i < bill.length; i++) {
+				tip[i] = tipCalculator(bill[i]);
+				totalBill[i] = bill[i] + tip[i];
+			}
+			//log to the console
+			console.log(tip);
+			console.log(totalBill);
+		</script>
+	</body>
+</html>
